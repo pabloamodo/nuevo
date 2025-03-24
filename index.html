@@ -3,62 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Tienda de Zapatillas Vintage</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Mi Portafolio</h1>
+        <div class="logo">
+            <a href="#">SNEAKERS<span>VINTAGE</span></a>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#shop">Tienda</a></li>
+                <li><a href="#about">Nosotros</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+        </div>
     </header>
-    
-    <section id="hero" data-aos="fade-up">
-        <h2>Bienvenido a mi espacio creativo</h2>
-        <p>Diseño, desarrollo y creo experiencias digitales.</p>
-    </section>
-    
-    <section id="about" data-aos="fade-right">
-        <img src="https://source.unsplash.com/400x300/?portrait" alt="Foto de perfil">
-        <div>
-            <h2>Sobre mí</h2>
-            <p>Hola, soy un diseñador y desarrollador web con pasión por la creatividad y la tecnología.</p>
-        </div>
-    </section>
-    
-    <section id="projects" data-aos="fade-left">
-        <h2>Proyectos Destacados</h2>
-        <div class="projects-container">
-            <div class="project" data-aos="zoom-in">
-                <img src="https://source.unsplash.com/400x300/?technology" alt="Proyecto 1">
-                <h3>Proyecto 1</h3>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>ZAPATILLAS VINTAGE <br> COLECCIÓN EXCLUSIVA</h1>
+                <a href="#shop" class="btn">VER COLECCIÓN</a>
             </div>
-            <div class="project" data-aos="zoom-in">
-                <img src="https://source.unsplash.com/400x300/?website" alt="Proyecto 2">
-                <h3>Proyecto 2</h3>
+        </section>
+
+        <section id="shop" class="products">
+            <h2>ÚLTIMAS ADQUISICIONES</h2>
+            <div class="product-grid">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
             </div>
-        </div>
-    </section>
-    
-    <section id="contact" data-aos="fade-up">
-        <h2>Contacto</h2>
-        <p>Si quieres trabajar conmigo, escríbeme a <a href="mailto:correo@example.com">correo@example.com</a></p>
-    </section>
-    
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos apasionados por las zapatillas vintage y nos dedicamos a encontrar piezas únicas y exclusivas de los años 80, 90 y principios de los 2000. Cada par en nuestra colección ha sido cuidadosamente seleccionado y autenticado.</p>
+                <p>Nuestra misión es conectar a los amantes del calzado vintage con esas piezas icónicas que marcaron época.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Zapatillas vintage">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>CONTACTO</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn">ENVIAR</button>
+            </form>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Mi Portafolio</p>
+        <p>&copy; 2023 Sneakers Vintage. Todos los derechos reservados.</p>
     </footer>
-    
-    <script>
-        AOS.init();
-    </script>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>TU CARRITO</h2>
+            <div class="cart-items">
+                <!-- Los items del carrito se cargarán dinámicamente -->
+            </div>
+            <div class="cart-total">
+                <span>TOTAL: $<span id="total-amount">0</span></span>
+                <button class="btn checkout-btn">PROCEDER AL PAGO</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
